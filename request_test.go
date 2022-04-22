@@ -8,8 +8,11 @@ import (
 
 func TestRequest(t *testing.T) {
 	var handler http.HandlerFunc = func(w http.ResponseWriter, r *http.Request) {
-		//find request
-		fmt.Fprintln(w, r.Method)
+		//get information 
+
+		fmt.Fprintln(w,  r.Header)
+		fmt.Fprintln(w, r.Body)
+		fmt.Fprintln(w,r.Method)
 		fmt.Fprintln(w, r.RequestURI)
 	}
 
